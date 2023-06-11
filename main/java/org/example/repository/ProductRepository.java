@@ -1,0 +1,12 @@
+package org.example.repository;
+
+import org.example.entity.Category;
+import org.example.entity.Product;
+
+import java.sql.SQLException;
+
+public interface ProductRepository {
+    void save (Product product) throws SQLException;
+    Product load (int productId) throws SQLException;
+    void delete (int productId) throws SQLException;
+}
