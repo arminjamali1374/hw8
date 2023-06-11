@@ -16,4 +16,52 @@ public class Product {
         this.brandId = brandId;
     }
 
+
+    public Product(String name, String createData, int categoryId, int brandId) {
+        this.name = name;
+        this.createData = createData;
+        this.categoryId = categoryId;
+        this.brandId = brandId;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCreateData() {
+        return createData;
+    }
+
+    public void setCreateData(String createData) {
+        this.createData = createData;
+    }
+
+    public int getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
+    }
+
+    public int getBrandId() {
+        return brandId;
+    }
+
+    public void setBrandId(int brandId) {
+        this.brandId = brandId;
+    }
+
 }
