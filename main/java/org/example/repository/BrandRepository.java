@@ -2,6 +2,7 @@ package org.example.repository;
 
 import org.example.entity.Brand;
 
+import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public interface BrandRepository {
