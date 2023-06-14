@@ -9,4 +9,5 @@ public interface UserService {
     User load(int userId) throws SQLException;
     void delete(int userId) throws SQLException;
 
+
 }
