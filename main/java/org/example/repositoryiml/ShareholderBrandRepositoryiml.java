@@ -46,4 +46,6 @@ public class ShareholderBrandRepositoryiml implements ShareholderBrandRepository
         preparedStatement.execute();
 
     }
+
+
 }

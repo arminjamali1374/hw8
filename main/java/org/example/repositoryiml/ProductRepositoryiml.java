@@ -44,4 +44,16 @@ public class ProductRepositoryiml implements ProductRepository {
         preparedStatement.execute();
 
     }
+
+    @Override
+    public boolean existsByName(String productName) throws SQLException {
+        String query= """
+                select exists(select * from "product" where name=?)
+                """;
+        PreparedStatement preparedStatement=ApplicationContext.getConnection().prepareStatement(query);
+        preparedStatement.setString(1,productName);
+        ResultSet resultSet= preparedStatement.executeQuery();
+        resultSet.next();
+        return  resultSet.getBoolean(1);
+    }
 }

@@ -2,21 +2,21 @@ package org.example.entity;
 
 public class Shareholder {
     private  int id;
-    private String name;
-    private int phoneNumber;
-    private int nationalCode;
+    private static String name;
+    private static int phoneNumber;
+    private static int nationalCode;
 
     public Shareholder(int id, String name, int phoneNumber, int nationalCode) {
         this.id = id;
-        this.name = name;
-        this.phoneNumber=phoneNumber;
-        this.nationalCode = nationalCode;
+        Shareholder.name = name;
+        Shareholder.phoneNumber =phoneNumber;
+        Shareholder.nationalCode = nationalCode;
     }
 
     public Shareholder(String name, int phoneNumber, int nationalCode) {
-        this.name = name;
-        this.phoneNumber = phoneNumber;
-        this.nationalCode = nationalCode;
+        Shareholder.name = name;
+        Shareholder.phoneNumber = phoneNumber;
+        Shareholder.nationalCode = nationalCode;
     }
 
     public int getId() {
@@ -27,27 +27,27 @@ public class Shareholder {
         this.id = id;
     }
 
-    public String getName() {
+    public static String getName() {
         return name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        Shareholder.name = name;
     }
 
-    public int getPhoneNumber() {
+    public static int getPhoneNumber() {
         return phoneNumber;
     }
 
     public void setPhoneNumber(int phoneNumber) {
-        this.phoneNumber = phoneNumber;
+        Shareholder.phoneNumber = phoneNumber;
     }
 
-    public int getNationalCode() {
+    public static int getNationalCode() {
         return nationalCode;
     }
 
     public void setNationalCode(int nationalCode) {
-        this.nationalCode = nationalCode;
+        Shareholder.nationalCode = nationalCode;
     }
 }

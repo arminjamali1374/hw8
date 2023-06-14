@@ -9,4 +9,5 @@ public interface ShareholderRepository {
     void save (ShareholderRepository shareholderRepository) throws SQLException;
     Shareholder load (int ShareholderId) throws SQLException;
     void delete (int ShareholderId) throws SQLException;
+    boolean existsByName (String ShareholderName) throws SQLException;
 }

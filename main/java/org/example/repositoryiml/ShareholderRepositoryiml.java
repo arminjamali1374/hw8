@@ -46,4 +46,17 @@ public class ShareholderRepositoryiml implements ShareholderRepository {
         preparedStatement.setInt(1,ShareholderId);
         preparedStatement.execute();
     }
+
+    @Override
+    public boolean existsByName(String ShareholderName) throws SQLException {
+        String query = """
+                SELECT exists(SELECT * FROm "Shareholder" WHERE name = ?)
+                """;
+        PreparedStatement preparedStatement = ApplicationContext.getConnection().prepareStatement(query);
+        preparedStatement.setString(1,ShareholderName);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        resultSet.next();
+
+        return resultSet.getBoolean(1);
+    }
 }

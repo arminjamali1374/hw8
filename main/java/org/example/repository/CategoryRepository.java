@@ -9,4 +9,6 @@ public interface CategoryRepository {
     void save (Category category) throws SQLException;
     Category load (int categoryId) throws SQLException;
     void delete (int categoryId) throws SQLException;
+    boolean existsByName (String CategoryName) throws SQLException;
+
 }

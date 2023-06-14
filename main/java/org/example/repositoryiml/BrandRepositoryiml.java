@@ -49,4 +49,19 @@ public class BrandRepositoryiml implements BrandRepository {
         preparedStatement.setInt(1,brandId);
         preparedStatement.execute();
     }
+
+    @Override
+    public boolean existsByName(String brandName) throws SQLException {
+        String query = """
+                SELECT count(*) FROM brand WHERE name = ?
+                """;
+        PreparedStatement preparedStatement = ApplicationContext.getConnection().prepareStatement(query);
+        preparedStatement.setString(1,brandName);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        resultSet.next();
+
+        return (resultSet.getInt(1) == 0);
+    }
+
+
 }

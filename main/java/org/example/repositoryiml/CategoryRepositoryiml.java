@@ -43,4 +43,19 @@ public class CategoryRepositoryiml implements CategoryRepository {
         preparedStatement.setInt(1,categoryId);
         preparedStatement.execute();
     }
+
+    @Override
+    public boolean existsByName(String CategoryName) throws SQLException {
+        String query = """
+                SELECT exists(SELECT * FROm category WHERE name = ?)
+                """;
+        PreparedStatement preparedStatement = ApplicationContext.getConnection().prepareStatement(query);
+        preparedStatement.setString(1,CategoryName);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        resultSet.next();
+
+        return resultSet.getBoolean(1);
+    }
+
+
 }

@@ -24,6 +24,7 @@ public class Product {
         this.brandId = brandId;
     }
 
+
     public int getId() {
         return id;
     }
