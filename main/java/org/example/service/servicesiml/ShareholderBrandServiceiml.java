@@ -1,4 +1,4 @@
-package org.example.servicesiml;
+package org.example.service.servicesiml;
 
 public class ShareholderBrandServiceiml {
 }

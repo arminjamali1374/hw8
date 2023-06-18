@@ -1,9 +1,7 @@
-package org.example.repositoryiml;
+package org.example.repository.repositoryiml;
 
 import org.example.connection.ApplicationContext;
-import org.example.entity.Product;
 import org.example.entity.Shareholder;
-import org.example.repository.ShareholderBrandRepository;
 import org.example.repository.ShareholderRepository;
 
 import java.sql.PreparedStatement;

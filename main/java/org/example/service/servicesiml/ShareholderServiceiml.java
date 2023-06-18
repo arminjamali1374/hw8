@@ -1,4 +1,4 @@
-package org.example.servicesiml;
+package org.example.service.servicesiml;
 
 import org.example.entity.Shareholder;
 import org.example.service.ShareholderService;
@@ -23,11 +23,11 @@ public class ShareholderServiceiml implements ShareholderService {
 
     @Override
     public boolean existsByNationalCode(String nationalCode) throws SQLException {
-        return nationalCode.matches("^[0-9]{10}$");
+        return nationalCode.matches("^[0-9]{6}$");
     }
 
     @Override
     public boolean existsByPhoneNumber(String phoneNumber) throws SQLException {
-        return phoneNumber.matches("\\\\d{10}|(?:\\\\d{3}-){2}\\\\d{4}|\\\\(\\\\d{3}\\\\)\\\\d{3}-?\\\\d{4}");
+        return phoneNumber.matches("^\\+(?:[0-9] ?){6,14}[0-9]$");
     }
 }

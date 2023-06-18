@@ -1,8 +1,8 @@
-package org.example.servicesiml;
+package org.example.service.servicesiml;
 
 import org.example.entity.User;
 import org.example.repository.UserRepository;
-import org.example.repositoryiml.UserRepositoryiml;
+import org.example.repository.repositoryiml.UserRepositoryiml;
 import org.example.service.UserService;
 
 import java.sql.SQLException;
@@ -40,7 +40,7 @@ public class UserServiceiml implements UserService {
     }
 
     private boolean isValidEmail(String email){
-        return email.matches("^(?=.{1,64}@)[A-Za-z0-9_-]+(\\\\.[A-Za-z0-9_-]+)*@[^-][A-Za-z0-9-]+(\\\\.[A-Za-z0-9-]+)*(\\\\.[A-Za-z]{2,})$");
+        return email.matches("^[A-Za-z0-9+_.-]+@(.+)$");
     }
 
     private boolean isValidPassword(String password){

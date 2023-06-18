@@ -23,14 +23,16 @@ Scanner scanner=new Scanner(System.in);
         String password=scanner.nextLine();
 
         return new User(firstName,lastname,email,password);
+
         }
 
 
-    public void runMenu(){
+    public boolean runMenu(){
         String [] armin={"===welcome to business===","1=singIn","2=singUp",};
         for (String panel:armin){
             System.out.println(panel);
         }
+        return false;
     }
 
     public void run(){

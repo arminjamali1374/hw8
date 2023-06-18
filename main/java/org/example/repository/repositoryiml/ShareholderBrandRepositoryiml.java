@@ -1,4 +1,4 @@
-package org.example.repositoryiml;
+package org.example.repository.repositoryiml;
 
 import org.example.connection.ApplicationContext;
 import org.example.entity.Product;

@@ -1,7 +1,13 @@
 package org.example;
 
+import org.example.menu.Menue;
+
+import java.awt.*;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Menue menue=new Menue();
+        System.out.println(menue.runMenu());
+
     }
 }

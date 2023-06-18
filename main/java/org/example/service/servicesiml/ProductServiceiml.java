@@ -1,8 +1,8 @@
-package org.example.servicesiml;
+package org.example.service.servicesiml;
 
 import org.example.entity.Product;
 import org.example.repository.ProductRepository;
-import org.example.repositoryiml.ProductRepositoryiml;
+import org.example.repository.repositoryiml.ProductRepositoryiml;
 import org.example.service.ProductService;
 
 import java.sql.SQLException;
